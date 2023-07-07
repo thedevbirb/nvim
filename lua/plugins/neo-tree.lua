@@ -1,7 +1,6 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-
     config = function()
       require("neo-tree").setup({
         window = {
@@ -12,5 +11,6 @@ return {
         },
       })
     end,
+    keys = { { "<leader>e", "<leader>E", remap = true }, { "<leader>fe", "<leader>fE", remap = true } },
   },
 }

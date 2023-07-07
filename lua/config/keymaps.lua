@@ -30,3 +30,6 @@ vim.keymap.set("n", "<leader>d", '"_d')
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
+
+-- Toggle netrw
+vim.keymap.set("n", "<C-p>", "<cmd>Rex<cr>", opts)
