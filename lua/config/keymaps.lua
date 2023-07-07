@@ -30,3 +30,11 @@ vim.keymap.set("n", "<leader>d", '"_d')
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>dio", function()
+  vim.cmd("CellularAutomaton make_it_rain")
+  vim.fn.system("ffplay -nodisp -autoexit ~/Music/el.mp3 > /dev/null 2>&1 &")
+end, opts)
