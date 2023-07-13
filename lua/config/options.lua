@@ -4,3 +4,7 @@
 
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
+
+-- do not use system clipboard always
+-- see keymaps.lua for specifc access to it
+vim.opt.clipboard = ""
