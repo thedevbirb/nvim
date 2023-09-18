@@ -10,5 +10,10 @@ return {
         },
       },
     },
+    keys = {
+      { "<leader>gwl", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>" },
+      { "<leader>gwc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>" },
+    },
+    -- keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
   },
 }
