@@ -9,5 +9,9 @@ return {
         },
       },
     },
+    -- always start from root
+    keys = {
+      { "<leader>e", "<leader>fE", desc = "Explorer NeoTree (root dir)", remap = true },
+    },
   },
 }

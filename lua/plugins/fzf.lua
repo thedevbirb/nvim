@@ -3,9 +3,33 @@ return {
     "ibhagwan/fzf-lua",
     -- optional for icon support
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      -- calling `setup` is optional for customization
-      require("fzf-lua").setup({})
-    end,
+    cmd = "FzfLua",
+    keys = {
+      { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+      { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code actions" },
+      { "<leader>fR", "<cmd>FzfLua old_files<cr>", desc = "Recent" },
+      { "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
+      { "<leader>ff", "<cmd>FzfLua files<cr>", desc = "Find Files" },
+      { "<leader>fr", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+      { "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "commits" },
+      { "<leader>gd", "<cmd>FzfLua lsp_defintions<cr>", desc = "Definitions" },
+      { "<leader>gD", "<cmd>FzfLua lsp_declarations<cr>", desc = "Declarations" },
+      { "<leader>gf", "<cmd>FzfLua git_files<cr>", desc = "Git files" },
+      { "<leader>gr", "<cmd>FzfLua lsp_references<cr>", desc = "References" },
+      { "<leader>gs", "<cmd>FzfLua git_status<cr>", desc = "status" },
+      { "<leader>gt", "<cmd>FzfLua lsp_typedefs<cr>", desc = "Type definition" },
+      { "<leader>sC", "<cmd>FzfLua commands<cr>", desc = "Commands" },
+      { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace diagnostics" },
+      { "<leader>sM", "<cmd>FzfLua man_pages<cr>", desc = "Man Pages" },
+      { "<leader>sW", "<cmd>FzfLua grep_cWORD<cr>", desc = "Grep current WORD" },
+      { "<leader>sc", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
+      { "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document diagnostics" },
+      { "<leader>sg", "<cmd>FzfLua grep_project<cr>", desc = "Fuzzy grep" },
+      { "<leader>sh", "<cmd>FzfLua help_tags<cr>", desc = "Help Pages	" },
+      { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
+      { "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Marks" },
+      { "<leader>sw", "<cmd>FzfLua grep_cword<cr>", desc = "Grep current word" },
+      { '<leader>s"', "<cmd>FzfLua registers<cr>", desc = "Registers" },
+    },
   },
 }

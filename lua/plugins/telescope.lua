@@ -1,19 +1,20 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    opts = {
-      defaults = {
-        mappings = {
-          n = {
-            ["d"] = require("telescope.actions").delete_buffer,
-          },
+    lazy = true,
+    keys = function()
+      return {
+        {
+          "<leader>gwl",
+          "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>",
+          desc = "Git worktree list",
         },
-      },
-    },
-    keys = {
-      { "<leader>gwl", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>" },
-      { "<leader>gwc", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>" },
-    },
-    -- keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+        {
+          "<leader>gwc",
+          "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>",
+          desc = "Git worktree create",
+        },
+      }
+    end, -- disable all keymaps --> fzf-lua instead
   },
 }
