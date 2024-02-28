@@ -60,7 +60,7 @@ vim.keymap.set("n", "g,", "g;")
 vim.keymap.set("n", "<leader>rmswap", "<cmd>!rm -rf ~/.local/state/nvim/swap<cr>", { silent = true })
 
 -- when things don't work
-vim.keymap.set("n", "<leader>dio", function()
+vim.keymap.set("n", "<space><enter>", function()
   vim.cmd("CellularAutomaton make_it_rain")
   vim.fn.system("ffplay -nodisp -autoexit ~/Music/el_short.mp3 > /dev/null 2>&1 &")
-end, opts)
+end, { silent = true, desc = "f*** everything" })
