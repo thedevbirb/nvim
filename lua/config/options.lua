@@ -13,3 +13,6 @@ vim.opt.clipboard = ""
 -- for some reasons, it doesn't lag compared to remapping
 -- j,k to jzz, kzz respectively
 vim.opt.scrolloff = 999999
+
+-- LazyVim default is 2, too low
+vim.opt.tabstop = 4

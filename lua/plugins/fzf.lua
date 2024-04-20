@@ -7,10 +7,14 @@ return {
     keys = {
       { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
       { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code actions" },
-      { "<leader>fR", "<cmd>FzfLua old_files<cr>", desc = "Recent" },
+
+      -- find
+      { "<leader>fr", "<cmd>FzfLua old_files<cr>", desc = "Recent" },
       { "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
       { "<leader>ff", "<cmd>FzfLua files<cr>", desc = "Find Files" },
-      { "<leader>fr", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+      { "<leader>fR", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+
+      -- goto/git
       { "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "commits" },
       { "<leader>gd", "<cmd>FzfLua lsp_definitions<cr>", desc = "Definitions" },
       { "<leader>gD", "<cmd>FzfLua lsp_declarations<cr>", desc = "Declarations" },
@@ -18,9 +22,12 @@ return {
       { "<leader>gr", "<cmd>FzfLua lsp_references<cr>", desc = "References" },
       { "<leader>gs", "<cmd>FzfLua git_status<cr>", desc = "status" },
       { "<leader>gt", "<cmd>FzfLua lsp_typedefs<cr>", desc = "Type definition" },
+      { "<leader>gy", "<cmd>FzfLua lsp_typedefs<cr>", desc = "Type definition" },
+
+      -- search
+      { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace diagnostics" },
       { "<leader>sC", "<cmd>FzfLua commands<cr>", desc = "Commands" },
       { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace diagnostics" },
-      { "<leader>sM", "<cmd>FzfLua man_pages<cr>", desc = "Man Pages" },
       { "<leader>sW", "<cmd>FzfLua grep_cWORD<cr>", desc = "Grep current WORD" },
       { "<leader>sc", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
       { "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document diagnostics" },
