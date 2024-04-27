@@ -25,6 +25,7 @@ return {
       { "<leader>gy", "<cmd>FzfLua lsp_typedefs<cr>", desc = "Type definition" },
 
       -- search
+      { "<leader>sb", "<cmd>FzfLua grep_curbuf<cr>", desc = "Fuzzy grep in buffer" }, -- goated
       { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace diagnostics" },
       { "<leader>sC", "<cmd>FzfLua commands<cr>", desc = "Commands" },
       { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace diagnostics" },
@@ -32,7 +33,7 @@ return {
       { "<leader>sc", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
       { "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document diagnostics" },
       { "<leader>sg", "<cmd>FzfLua grep_project<cr>", desc = "Fuzzy grep" },
-      { "<leader>sh", "<cmd>FzfLua help_tags<cr>", desc = "Help Pages	" },
+      { "<leader>sh", "<cmd>FzfLua help_tags<cr>", desc = "Help Pages" },
       { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
       { "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Marks" },
       { "<leader>sw", "<cmd>FzfLua grep_cword<cr>", desc = "Grep current word" },
