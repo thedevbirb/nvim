@@ -1,3 +1,4 @@
+-- TODO: Move these language specific configurations to a separate directory
 return {
   {
     "ray-x/go.nvim",
