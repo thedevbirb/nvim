@@ -8,7 +8,10 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     config = function()
-      require("go").setup()
+      require("go").setup({
+        -- Disable them by default, toggle them with <leader>uh
+        lsp_inlay_hints = { enable = false },
+      })
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
