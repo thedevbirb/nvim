@@ -16,3 +16,6 @@ vim.opt.scrolloff = 999999
 
 -- LazyVim default is 2, too low
 vim.opt.tabstop = 4
+
+-- Without this, I dunno but I can't use `zf` to fold as usual
+vim.opt.foldmethod = "manual"

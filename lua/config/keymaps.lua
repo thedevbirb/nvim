@@ -37,6 +37,10 @@ vim.keymap.set({ "x", "v" }, "<leader>P", [["_dP]])
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- write with no autocommands
+vim.keymap.set("n", ",w", "<cmd>noa w<cr>")
+vim.keymap.set("n", ",wa", "<cmd>noa wa<cr>")
+
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)

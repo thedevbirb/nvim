@@ -10,6 +10,7 @@ return {
         "html",
         "javascript",
         "json",
+        "just",
         "lua",
         "luadoc",
         "luap",
@@ -27,5 +28,9 @@ return {
         "yaml",
       },
     },
+  },
+  {
+    -- Show function context
+    "nvim-treesitter/nvim-treesitter-context",
   },
 }
