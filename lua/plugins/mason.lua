@@ -11,7 +11,6 @@ return {
         "lua-language-server",
         "nil",
         "prettierd",
-        "rust-analyzer",
         "shfmt",
         "stylua",
         "taplo",
