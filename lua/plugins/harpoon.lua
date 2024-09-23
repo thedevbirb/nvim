@@ -6,21 +6,25 @@ return {
     lazy = true,
     keys = function()
       local harpoon = require("harpoon")
+
+      -- REQUIRED
+      harpoon:setup()
+      -- REQUIRED
+
       return {
         {
           "<leader>a",
           function()
             harpoon:list():add()
           end,
-          desc = "Add current buffer to harpoon",
         },
         {
           "<C-e>",
           function()
             harpoon.ui:toggle_quick_menu(harpoon:list())
           end,
-          desc = "Toggle harpoon quick menu",
         },
+
         {
           "<C-h>",
           function()
@@ -45,18 +49,20 @@ return {
             harpoon:list():select(4)
           end,
         },
-        -- {
-        --   "<C-S-P>",
-        --   function()
-        --     harpoon:list():prev()
-        --   end,
-        -- },
-        -- {
-        --   "<C-S-N>",
-        --   function()
-        --     harpoon:list():next()
-        --   end,
-        -- },
+
+        -- Toggle previous & next buffers stored within Harpoon list
+        {
+          "<C-S-P>",
+          function()
+            harpoon:list():prev()
+          end,
+        },
+        {
+          "<C-S-N>",
+          function()
+            harpoon:list():next()
+          end,
+        },
       }
     end,
   },

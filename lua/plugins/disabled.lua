@@ -7,4 +7,9 @@ return {
     "folke/flash.nvim",
     enabled = false,
   },
+  {
+    -- Most of the times I hate it
+    "echasnovski/mini.pairs",
+    enabled = false,
+  },
 }

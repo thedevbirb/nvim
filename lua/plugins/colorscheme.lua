@@ -19,6 +19,6 @@ return {
       end,
     },
   },
-  { "rose-pine/neovim", name = "rose-pine" },
-  { "ellisonleao/gruvbox.nvim" },
+  -- { "rose-pine/neovim", name = "rose-pine" },
+  -- { "ellisonleao/gruvbox.nvim" },
 }
