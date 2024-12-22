@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-frappe",
     },
   },
   {
@@ -11,7 +11,7 @@ return {
       update_interval = 1000,
       set_dark_mode = function()
         vim.api.nvim_set_option_value("background", "dark", {})
-        vim.cmd("colorscheme catppuccin-mocha")
+        vim.cmd("colorscheme catppuccin-frappe")
       end,
       set_light_mode = function()
         vim.api.nvim_set_option_value("background", "light", {})
@@ -19,6 +19,4 @@ return {
       end,
     },
   },
-  -- { "rose-pine/neovim", name = "rose-pine" },
-  -- { "ellisonleao/gruvbox.nvim" },
 }
