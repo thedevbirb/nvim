@@ -19,3 +19,7 @@ vim.opt.tabstop = 4
 
 -- Without this, I dunno but I can't use `zf` to fold as usual
 vim.opt.foldmethod = "manual"
+
+-- https://www.lazyvim.org/news#changes
+-- Please, no animations
+vim.g.snacks_animate = false
