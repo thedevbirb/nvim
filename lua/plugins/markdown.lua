@@ -3,6 +3,17 @@ return {
     "mzlogin/vim-markdown-toc",
     event = "VeryLazy",
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    keys = {
+      {
+        "<leader>mp",
+        "<cmd>MarkdownPreview<CR>",
+        "Markdown Preview",
+      },
+    },
+  },
 }
 -- {
 --   "epwalsh/obsidian.nvim",
