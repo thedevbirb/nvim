@@ -15,4 +15,9 @@ return {
       -- },
     },
   },
+  {
+    "idris-community/idris2-nvim",
+    config = true,
+    ft = "idris2",
+  },
 }
