@@ -127,7 +127,8 @@ vim.api.nvim_create_autocmd("TextChangedI", {
   callback = function()
     -- If we're coding in Lean4, don't do anything since their plugin already does this
     -- and it's better to not interfer
-    if vim.bo.filetype == "lean" then
+    -- If it's a typst file, don't do anything either
+    if vim.bo.filetype == "lean" or vim.bo.filetype == "typst" then
       return
     end
 
