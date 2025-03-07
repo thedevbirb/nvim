@@ -55,6 +55,11 @@ return {
                 ".venv",
               },
             },
+            rustfmt = {
+              extraArgs = {
+                "+nightly",
+              },
+            },
           },
         },
       },
