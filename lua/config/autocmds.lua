@@ -33,6 +33,42 @@ vim.api.nvim_create_autocmd("filetype", {
   end,
 })
 
+-- Kernel-style
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "h" },
+  callback = function()
+    vim.opt_local.tabstop = 8
+    vim.opt_local.shiftwidth = 8
+    vim.opt_local.softtabstop = 8
+    vim.opt_local.expandtab = false -- use real tabs
+    vim.opt_local.autoindent = true
+    vim.opt_local.smartindent = true
+    vim.opt_local.colorcolumn = "80"
+
+    -- Cscope keymaps
+    -- Find symbol
+    vim.keymap.set("n", "<leader>cs", ":cscope find s <C-R>=expand('<cword>')<CR><CR>")
+    -- Find global definition
+    vim.keymap.set("n", "<leader>cg", ":cscope find g <C-R>=expand('<cword>')<CR><CR>")
+    -- Find function call
+    vim.keymap.set("n", "<leader>cc", ":cscope find c <C-R>=expand('<cword>')<CR><CR>")
+    -- Find all occurrences of string
+    vim.keymap.set("n", "<leader>ct", ":cscope find t <C-R>=expand('<cword>')<CR><CR>")
+
+    -- Grep-based symbol search
+    vim.keymap.set("n", "<leader>gg", ":vimgrep /<C-R><C-W>/ **/*.c **/*.h | copen<CR>")
+
+    -- Automatically load cscope database
+    vim.cmd([[
+    if filereadable("cscope.out")
+        cs add cscope.out
+    endif
+    ]])
+    -- Example: disable nvim-autopairs
+    require("trouble").disable()
+  end,
+})
+
 -- Mapping of LaTeX commands to Unicode symbols
 local latex_symbols = {
   ["\\alpha"] = "α",
