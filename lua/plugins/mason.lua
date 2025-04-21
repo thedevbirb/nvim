@@ -5,7 +5,6 @@ return {
     opts = {
       ensure_installed = {
         "bash-language-server",
-        "clangd",
         "gopls",
         "json-lsp",
         "lua-language-server",
